@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStatus : CharacterStatus
+
 {
+    public void TakeDamage(float damage)
+    {
+        
+    }
     protected override void Teste()
     {
         
