@@ -21,10 +21,14 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if(collision.gameObject.TryGetComponent(out IInteractable target))
+
+        if (collision.gameObject.TryGetComponent(out IInteractable target))
         {
             interactable = target;
+        }
+        if (collision.gameObject.TryGetComponent(out ICollectable Collectable))
+        {
+            Destroy(collision. gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
